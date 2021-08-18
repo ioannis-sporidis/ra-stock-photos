@@ -34,6 +34,18 @@ function App() {
     fetchImages();
   }, []);
 
+  useEffect(() => {
+    const event = window.addEventListener('scroll', () => {
+      if (
+        !loading &&
+        window.innerHeight + window.scrollY >= document.body.scrollHeight - 2
+      ) {
+        console.log('you reached the end of the page');
+      }
+    });
+    return () => window.removeEventListener('scroll', event);
+  }, []);
+
   return (
     <main>
       <section className='serach'>
