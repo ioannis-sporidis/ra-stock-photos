@@ -16,6 +16,7 @@ const Photo = ({
       <div className='photo-info'>
         <div>
           <h4>{name}</h4>
+
           <p>{likes} Likes</p>
         </div>
         <a href={portfolio_url} target='_blank' rel='noreferrer'>
